@@ -60,10 +60,10 @@ open-coding-agent/
 ## Prerequisites
 
 - **Ollama** installed and running locally.  
-  Download from [ollama.com](https://ollama.com) and pull a model (e.g. `llama3.2`):
+  Download from [ollama.com](https://ollama.com) and pull a model (e.g. `gemma4:e2b`):
   ```bash
   ollama serve          # start the server (in a separate terminal)
-  ollama pull llama3.2
+  ollama pull gemma4:e2b
   ```
 - **Python 3.9+** with a virtual environment recommended.
 
