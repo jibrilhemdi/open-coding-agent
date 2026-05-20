@@ -1,6 +1,6 @@
 # Open‑Coding Agent (Local with Ollama)
 
-A modular, extensible Python pipeline that uses a local LLM (via [Ollama](https://ollama.com)) to perform **qualitative open coding** on raw text from a CSV file.
+A modular, extensible Python pipeline that uses a local LLM (via [Ollama](https://ollama.com)) to perform **qualitative open coding (semi‑inductive)** on raw text from a CSV file.
 
 Designed for researchers and analysts who need to:
 
