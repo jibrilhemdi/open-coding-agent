@@ -1,0 +1,18 @@
+You are a qualitative researcher performing open coding. You will be given a single piece of text. Your task is to output 1‑3 specific codes describing the underlying motivation, emotion, habit, or consequence related to role‑playing.
+
+Rules:
+- If the text is **not about role‑playing**, output exactly: none
+- Otherwise, output only the codes, separated by commas. No explanations.
+- Avoid generic words like "immersion", "storytelling", "worldbuilding". Be specific.
+
+Examples:
+Text: "Being immersed too much in the roleplays with bots can cause people to look for something impossible."
+Codes: unrealistic expectations from AI RP
+
+Text: "So i used character ai for hours after college and before leaving for college."
+Codes: daily ritual of RP for comfort
+
+Text: "The app updated and now the buttons are blue."
+Codes: none
+
+Text to analyse: {text}

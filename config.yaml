@@ -1,0 +1,47 @@
+input:
+  file_path: "data/input/posts.csv"
+  text_column: "selftext"
+
+chunking:
+  strategy: "sentence"
+  max_tokens: 512
+
+coding:
+  model: "gemma4:e2b"              
+  prompt_template_path: "prompts/open_coding.txt" 
+  temperature: 0.0
+  max_retries: 3
+    
+output:
+  file_path: "data/output/coded_output.csv"
+  columns: ["id", "original_text", "chunk", "codes"]
+
+logging:
+  level: "INFO"
+  file: "logs/pipeline.log"
+  rotate: "timestamp"
+
+checkpoint:
+  directory: "data/checkpoints"
+  interval: 20
+
+profiles:
+  # Run only these profiles. Leave empty to run none.
+  active:
+    - roleplay
+    - embarrassment
+
+  # Default options for all profiles (can be overridden per profile)
+  output_dir: "data/output"
+
+  # Per‑profile configuration
+  roleplay:
+    prompt_file: "profiles/roleplay/prompt.txt"
+    keywords_file: "profiles/roleplay/keywords.txt"
+    filter_enabled: true
+    output_suffix: "rp"
+  embarrassment:
+    prompt_file: "profiles/embarrassment/prompt.txt"
+    keywords_file: "profiles/embarrassment/keywords.txt"
+    filter_enabled: true
+    output_suffix: "embarrass"

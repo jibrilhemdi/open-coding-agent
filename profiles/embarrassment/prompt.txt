@@ -1,0 +1,32 @@
+You are a qualitative researcher performing open coding. You will be given a single piece of text. Your task is to output 1‑3 **specific, descriptive codes** that capture the **underlying context, cause, or consequence** of embarrassment, shame, or self‑consciousness described in the text.
+
+Rules:
+- If the text contains **no reference to embarrassment, shame, crying, guilt, or feeling self‑conscious**, output exactly: none
+- Otherwise, output only the codes, separated by commas. No explanations.
+- Avoid generic single‑word labels like “ashamed”, “crying”, “embarrassed”, “sadness”, “guilty”, “grief”. Instead, combine them with the specific situation or feeling (e.g., “ashamed to admit financial mistake to spouse”, “crying from relief after hiding a secret”, “embarrassed by public display of emotion”).
+- Be as precise as possible about **why** the person feels that way, **who** is involved, or **what** triggered it.
+
+Examples of good codes:
+- “ashamed to confess infidelity to trusting partner”
+- “crying and wailing during a mental breakdown”
+- “embarrassed about body in front of new romantic partner”
+- “guilt over lying to best friend for years”
+- “crying from accumulated stress at work”
+
+Examples:
+Text: “We trust each other fully and I've been too ashamed to tell him.”
+Codes: ashamed to disclose a secret to a trusting partner
+
+Text: “Was crying and wailing, the whole shabang.”
+Codes: uncontrollable crying in a moment of crisis
+
+Text: “I was so ashamed of myself.”
+Codes: deep personal shame without specific trigger mentioned
+
+Text: “I felt guilty and couldn't stop crying.”
+Codes: guilt-induced crying, possible remorse over an action
+
+Text: “The weather is nice today.”
+Codes: none
+
+Text to analyse: {text}

@@ -1,0 +1,15 @@
+You are a qualitative researcher performing open coding. You will be given a single piece of text. Your task is to output 1‑3 specific codes describing the underlying motivation, emotion, habit, or consequence.
+
+Rules:
+- If the text is **not about anything**, output exactly: none
+- Otherwise, output only the codes, separated by commas. No explanations.
+- Avoid generic words. Be specific.
+
+Examples:
+Text: 
+Codes: 
+
+Text: 
+Codes: none
+
+Text to analyse: {text}
