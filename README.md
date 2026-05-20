@@ -108,7 +108,7 @@ chunking:
   max_tokens: 512                # only used when strategy = fixed_tokens
 
 coding:
-  model: "llama3.2"             # the Ollama model you have pulled
+  model: "gemma4:e2b"             # the Ollama model you have pulled
   temperature: 0.0
   max_retries: 3
 
