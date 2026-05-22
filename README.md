@@ -248,5 +248,6 @@ The output CSV has three columns:
 - `python-dotenv` – environment variable loading (optional)
 - `nltk` – sentence tokenization (optional; `punkt` downloaded automatically)
 - `ollama` – Python client for Ollama
+- `streamlit` – Web interface
 
 Install all with `pip install -r requirements.txt`.
