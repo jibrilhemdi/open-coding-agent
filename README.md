@@ -16,8 +16,7 @@ Designed for researchers and analysts who need to:
 
 ## What is Open Coding?
 
-Open coding is a foundational technique in qualitative research.  
-It involves breaking raw text data into small segments (chunks) and assigning concise labels (codes) that capture the underlying meaning, topic, emotion, etc.  
+Open coding is a foundational technique in qualitative research. It involves breaking raw text data into small segments (chunks) and assigning concise labels (codes) that capture the underlying meaning, topic, emotion, etc.  
 
 This project automates that process using a **local LLM** (via [Ollama](https://ollama.com)).  
 You define a coding focus (e.g., role‑play dynamics, embarrassment cues, user motivations) through a simple prompt and a keyword filter, and the pipeline returns a coded CSV ready for analysis.
