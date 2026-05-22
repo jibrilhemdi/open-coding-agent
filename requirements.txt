@@ -3,3 +3,5 @@ pyyaml
 python-dotenv
 nltk
 ollama
+streamlit
+watchdog
