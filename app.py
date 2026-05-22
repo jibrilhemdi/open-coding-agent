@@ -74,6 +74,11 @@ if "selected_profiles" not in st.session_state:
 # ----------------------------------------------------------------------
 st.set_page_config(page_title="Open‑Coding Agent", layout="wide")
 st.title("🔍 Open‑Coding Agent (Ollama)")
+st.markdown("""
+**Open coding** is a qualitative method where raw text is segmented and tagged with meaningful labels.  
+This tool lets you code large CSV files using a local LLM (Ollama) with custom profiles.  
+For documentation and source code, visit the [GitHub repository](https://github.com/jibrilhemdi/open-coding-agent).
+""")
 
 # Load default config.yaml (if exists) for initial values
 defaults = {}

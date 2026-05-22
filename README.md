@@ -2,6 +2,8 @@
 
 A modular, extensible Python pipeline that uses a local LLM (via [Ollama](https://ollama.com)) to perform **qualitative open coding (semi‑inductive)** on raw text from a CSV file.
 
+You can run the pipeline from the command line or through an interactive [Streamlit web interface](https://open-coding-agent.streamlit.app/).
+
 Designed for researchers and analysts who need to:
 
 - Segment large text datasets into chunks (sentences, paragraphs, or fixed‑size)
@@ -9,6 +11,16 @@ Designed for researchers and analysts who need to:
 - Use a configurable **keyword filter** to skip irrelevant chunks before calling the LLM (saving time)
 - **Resume from the last checkpoint** if the pipeline is interrupted – no lost work
 - Output timestamped CSV files with rich, context‑specific codes
+
+---
+
+## What is Open Coding?
+
+Open coding is a foundational technique in qualitative research.  
+It involves breaking raw text data into small segments (chunks) and assigning concise labels (codes) that capture the underlying meaning, topic, emotion, etc.  
+
+This project automates that process using a **local LLM** (via [Ollama](https://ollama.com)).  
+You define a coding focus (e.g., role‑play dynamics, embarrassment cues, user motivations) through a simple prompt and a keyword filter, and the pipeline returns a coded CSV ready for analysis.
 
 ---
 
@@ -21,6 +33,7 @@ Designed for researchers and analysts who need to:
 - **Checkpointing** – periodically saves progress; restart from exactly where you left off if something fails.
 - **Timestamped output** – every run creates a new CSV file; never overwrite previous results.
 - **Pluggable chunking** – sentence, paragraph, or fixed‑token chunking strategies (easily extendable).
+- **Streamlit GUI** – upload data, manage profiles, edit prompts, and run the pipeline from your browser.
 
 ---
 
@@ -31,6 +44,7 @@ open-coding-agent/
 ├── README.md
 ├── requirements.txt
 ├── config.yaml                 # main configuration file
+├── app.py                      # Streamlit UI
 ├── prompts/                    # (optional) default prompt templates
 ├── profiles/                   # coding profiles (one folder per theme)
 │   ├── roleplay/
@@ -91,6 +105,28 @@ open-coding-agent/
 4. **Prepare your input CSV** – place it in `data/input/`.  
    The CSV must contain at least one column with the raw text (e.g. a column named `review`).  
    An optional `id` column can be used to identify rows; otherwise row numbers are used.
+
+---
+
+## Streamlit Web Interface (Recommended)
+
+For an **interactive, no‑code experience**, launch the GUI:
+
+```bash
+streamlit run app.py
+```
+
+Your browser will open `http://localhost:8501`. The app allows you to:
+
+- 📄 **Upload a CSV** file directly.
+- 🎯 **Select existing profiles** or **create new ones** from the sidebar.
+- 📝 **Preview and edit prompts/keywords** in real time, and save changes to disk.
+- 🗑️ **Delete** unwanted profiles with a single click.
+- ⚙️ **Configure** the model, chunking, checkpointing, and filter settings.
+- 🚀 **Run the coding** and watch live progress bars.
+- ⬇️ **Download** separate CSV outputs for each profile.
+
+All changes you make to prompts and keywords in the UI can be saved permanently, making it easy to iterate on your coding scheme without touching a text editor.
 
 ---
 
@@ -157,7 +193,7 @@ You can add as many profiles as you like; just create a new folder and add an en
 
 ---
 
-## Running the Pipeline
+## Running the Pipeline (Optional)
 
 From the project root:
 
